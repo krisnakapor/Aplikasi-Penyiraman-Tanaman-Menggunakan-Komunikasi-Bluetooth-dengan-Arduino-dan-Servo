@@ -5,33 +5,32 @@ This project Desigened for Arduino Bluetooth control HC-05 module from Android.
 Arduino code for Hc-05 module 
 
 ```
+#include<Servo.h>             //memanggil library servo
 
-char data = 0;               
+Servo myservo;
+int pos = 0;
+char data = 0;            
+   
 void setup() 
 {
-  Serial.begin(9600);         //Sets the data rate in bits per second (baud) for serial data transmission
-  pinMode(13, OUTPUT);        //Sets digital pin 13 as output pin
+  myservo.attach(11);         //Mengatur Servo pada pin 11
+  Serial.begin(9600);         //Mengatur data rate dalam bits per second (baud) untuk transmisi data serial
+  pinMode(13, OUTPUT);        //Mengatur digital pin 13 sebagai output pin LED
 }
 void loop()
 {
-  if(Serial.available() > 0)  // Send data only when you receive data:
+  if(Serial.available() > 0)  //Mengirim data ke arduino ketika menerima data dari bluetooth
   {
-    data = Serial.read();             
-          
-    if(data == 1)            
-      digitalWrite(13, HIGH);  
-    else
-      digitalWrite(13, LOW);   
-  }                           
- 
+    data = Serial.read();                 
+    if(data == 1){            
+      digitalWrite(13, HIGH);
+      myservo.write(180);      //Mengirim data ke servo untuk menggeser servo ke 90 derajat atau membuka aliran air
+    }
+    if(data == 0){
+      digitalWrite(13, LOW);
+      myservo.write(90);       //Mengirim data ke servo untuk menggeser servo ke 0 derajat atau menutup aliran air
+    }
+  }
 }
 ```
-
-Coneection Method Arduino to HC-05 module
-
-set pin HC-05 module Rx - Arduino Tx 
-
-set pin HC-05 module TX - Arduino RX
-
-set GCC-GCC and 5v-5V
 #Bluetooth-Arduino-Servo
