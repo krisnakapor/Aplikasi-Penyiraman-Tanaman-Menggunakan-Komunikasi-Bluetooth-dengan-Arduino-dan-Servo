@@ -1,8 +1,4 @@
-# Android-Bluetooth-Control-Arduino-LED
-
-This project Desigened for Arduino Bluetooth control HC-05 module from Android.
-
-Arduino code for Hc-05 module 
+# Bluetooth-Arduino-Servo
 
 ```
 #include<Servo.h>             //memanggil library servo
