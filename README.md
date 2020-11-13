@@ -1,5 +1,6 @@
 # Bluetooth-Arduino-Servo
 
+// PENYIRAMAN TANAMAN BLUETOOTH
 ```
 #include<Servo.h>             //memanggil library servo
 
@@ -20,11 +21,11 @@ void loop()
     data = Serial.read();                 
     if(data == 1){            
       digitalWrite(13, HIGH);
-      myservo.write(180);      //Mengirim data ke servo untuk menggeser servo ke 90 derajat atau membuka aliran air
+      myservo.write(180);      //Mengirim data ke servo untuk menggeser/membuka aliran air
     }
     if(data == 0){
       digitalWrite(13, LOW);
-      myservo.write(90);       //Mengirim data ke servo untuk menggeser servo ke 0 derajat atau menutup aliran air
+      myservo.write(90);       //Mengirim data ke servo untuk menggeser/menutup aliran air
     }
   }
 }
