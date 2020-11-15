@@ -1,6 +1,18 @@
 # Bluetooth-Arduino-Servo
 
-// PENYIRAMAN TANAMAN BLUETOOTH
+// PENYIRAMAN TANAMAN MENGGUNAKAN BLUETOOTH
+
+Program ini dibuat untuk melakukan penyiraman tanaman
+menggunakan bluetooth dimana motor servo sebagai keran
+atau pembuka/penutup aliran air, menggunakan arduino dan
+dikontrol melalui aplikasi pada android.
+komponen yang digunakan :
+- motor servo
+- arduino uno
+- bluetooth hc-05
+
+berikut kodingan arduinonya :
+
 ```
 #include<Servo.h>             //memanggil library servo
 
