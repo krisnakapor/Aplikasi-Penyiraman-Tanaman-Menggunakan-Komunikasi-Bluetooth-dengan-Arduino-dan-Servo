@@ -1,6 +1,4 @@
-# Bluetooth-Arduino-Servo
-
-// PENYIRAMAN TANAMAN MENGGUNAKAN BLUETOOTH
+# APLIKASI PENYIRAMAN TANAMAN MENGGUNAKAN KOMUNIKASI BLUETOOTH
 
 Program ini dibuat untuk melakukan penyiraman tanaman
 menggunakan bluetooth dimana motor servo sebagai keran
@@ -42,4 +40,3 @@ void loop()
   }
 }
 ```
-#Bluetooth-Arduino-Servo
