@@ -1,7 +1,6 @@
 # APLIKASI PENYIRAMAN TANAMAN MENGGUNAKAN KOMUNIKASI BLUETOOTH
 
-Program ini dibuat untuk melakukan penyiraman tanaman dengan
-komunikasi bluetooth yang dikontrol melalui aplikasi android.
+Program ini dibuat untuk melakukan penyiraman tanaman dengan komunikasi bluetooth yang dikontrol melalui aplikasi android.
 Komponen yang digunakan :
 - motor servo
 - arduino uno
